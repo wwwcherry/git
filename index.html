@@ -6,53 +6,50 @@
 <title>Jornal Diário</title>
 
 <style>
-/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Corpo */
 body {
     font-family: "Georgia", "Times New Roman", serif;
-    background-color: #f4f1ea;
+    background-color: #f1efe8;
     color: #222;
-    line-height: 1.6;
     padding: 20px;
 }
 
-/* Container principal */
 .container {
     max-width: 1200px;
     margin: auto;
     background: #fff;
     padding: 40px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
 /* Cabeçalho */
 header {
     text-align: center;
-    border-bottom: 3px solid #000;
+    border-bottom: 4px double #000;
     margin-bottom: 30px;
     padding-bottom: 15px;
 }
 
 header h1 {
-    font-size: 48px;
-    letter-spacing: 3px;
+    font-size: 52px;
     text-transform: uppercase;
+    letter-spacing: 4px;
 }
 
 header p {
     font-size: 14px;
+    margin-top: 5px;
     color: #555;
 }
 
 /* Manchete */
 .manchete {
-    font-size: 36px;
+    font-size: 38px;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -60,11 +57,11 @@ header p {
 .subtitulo {
     font-size: 20px;
     font-style: italic;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     color: #555;
 }
 
-/* Colunas estilo jornal */
+/* Conteúdo em colunas */
 .conteudo {
     column-count: 3;
     column-gap: 40px;
@@ -78,28 +75,34 @@ header p {
 
 /* Primeira letra grande */
 .conteudo p::first-letter {
-    font-size: 42px;
+    font-size: 45px;
     font-weight: bold;
     float: left;
     margin-right: 8px;
     line-height: 1;
 }
 
-/* Imagens */
-.conteudo img {
-    width: 100%;
-    margin: 15px 0;
+/* Bloco de imagem dentro das colunas */
+.imagem-meio {
     break-inside: avoid;
+    margin: 15px 0;
+    text-align: center;
 }
 
-/* Separador */
-hr {
-    margin: 30px 0;
-    border: none;
-    border-top: 1px solid #ccc;
+.imagem-meio img {
+    width: 100%;
+    border: 1px solid #ccc;
 }
 
-/* Responsividade */
+.imagem-meio span {
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+    color: #555;
+    font-style: italic;
+}
+
+/* Responsivo */
 @media (max-width: 900px) {
     .conteudo {
         column-count: 2;
@@ -124,36 +127,44 @@ hr {
 </header>
 
 <section>
-    <h2 class="manchete">Grande Evento Movimenta a Cidade</h2>
-    <h3 class="subtitulo">População participa em massa de celebração histórica</h3>
+    <h2 class="manchete">Cidade recebe festival cultural histórico</h2>
+    <h3 class="subtitulo">Evento reúne milhares de pessoas no centro</h3>
 </section>
 
-<hr>
-
 <section class="conteudo">
-    <p>
-        A cidade acordou em clima de festa nesta manhã. Moradores saíram às ruas
-        para participar do evento que promete entrar para a história local.
-        Desde cedo, diversas atividades culturais foram organizadas.
-    </p>
 
-    <p>
-        Especialistas destacam que iniciativas como essa fortalecem o comércio,
-        incentivam o turismo e promovem integração social entre os cidadãos.
-        A programação segue até o final da noite.
-    </p>
+<p>
+A população compareceu em peso ao evento que movimentou o centro da cidade
+neste fim de semana. Desde as primeiras horas da manhã, ruas foram tomadas
+por visitantes e moradores.
+</p>
 
-    <img src="https://via.placeholder.com/600x400" alt="Imagem ilustrativa">
+<div class="imagem-meio">
+    <img src="https://via.placeholder.com/600x350" alt="Festival na cidade">
+    <span>Moradores participam das atividades culturais.</span>
+</div>
 
-    <p>
-        Autoridades locais reforçaram o esquema de segurança e organização.
-        Segundo os organizadores, a expectativa é de público recorde nesta edição.
-    </p>
+<p>
+Apresentações musicais, exposições e feiras gastronômicas fizeram parte
+da programação oficial. A organização destacou que o objetivo é valorizar
+a cultura local e incentivar o turismo regional.
+</p>
 
-    <p>
-        Comerciantes relatam aumento significativo nas vendas e demonstram
-        entusiasmo com a movimentação intensa ao longo do dia.
-    </p>
+<p>
+Segundo estimativas, mais de 20 mil pessoas passaram pelo local ao longo
+do dia. Comerciantes comemoraram o aumento nas vendas.
+</p>
+
+<div class="imagem-meio">
+    <img src="https://via.placeholder.com/600x400" alt="Apresentação musical">
+    <span>Shows ao vivo animaram o público durante a tarde.</span>
+</div>
+
+<p>
+As autoridades reforçaram a segurança e afirmaram que o evento ocorreu
+de forma tranquila. Novas edições já estão sendo planejadas para o próximo ano.
+</p>
+
 </section>
 
 </div>
