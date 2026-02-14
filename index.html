@@ -17,7 +17,7 @@ body {
     background-color: #f1efe8;
     color: #222;
     padding: 20px;
-}
+    
 
 .container {
     max-width: 1200px;
@@ -148,7 +148,12 @@ Você certamente é a mulher mais linda desse mundo. Você pode até não levar 
 mas queria que você pudesse se ver como eu vejo. Apesar de não falar tanto, 
 você está sempre espetacular e eu amo observar seu sorriso, seu olhar, seu cabelo, corpo e poder ter a honra de 
 escutar sua risada e suas tagarelices.
-</p>
+<# passe pelo estado atual e adicione os arquivos corretos
+git restore --staged --worktree imagen-2.jfif || true
+git rm --cached --ignore-unmatch "imagem 2.jpg" || true
+git add index.html imagen-meio.jpg imagen-2.jpg || git add index.html imagem-meio.jpg
+git commit -m "Corrige paths das imagens e adiciona placeholders"
+git push/p>
 
 <p>
 Posso dizer que tenho orgulho da mulher que é e está se tornando. Eu me sinto sortudo por ter você comigo, 
